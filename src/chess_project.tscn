@@ -1,0 +1,195 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://art/chessboard.png" type="Texture" id=1]
+[ext_resource path="res://art/pedone_nero.png" type="Texture" id=2]
+[ext_resource path="res://art/pedone_bianco.png" type="Texture" id=3]
+[ext_resource path="res://art/re_nero.png" type="Texture" id=4]
+[ext_resource path="res://art/re_bianco.png" type="Texture" id=5]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	getnode(\"Camera2D\").addchild(map)
+	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[node name="Map" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.167786, -1.41899 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="white_pawn1" type="Node2D" parent="."]
+position = Vector2( -63.0381, 43.7029 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn1"]
+texture = ExtResource( 3 )
+
+[node name="white_pawn2" type="Node2D" parent="."]
+position = Vector2( -45.292, 43.1731 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn2"]
+texture = ExtResource( 3 )
+
+[node name="white_pawn3" type="Node2D" parent="."]
+position = Vector2( -25.692, 43.438 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn3"]
+texture = ExtResource( 3 )
+
+[node name="white_pawn4" type="Node2D" parent="."]
+position = Vector2( -8.47571, 43.7029 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn4"]
+texture = ExtResource( 3 )
+
+[node name="white_pawn5" type="Node2D" parent="."]
+position = Vector2( 8.47571, 43.7029 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn5"]
+texture = ExtResource( 3 )
+
+[node name="white_pawn6" type="Node2D" parent="."]
+position = Vector2( 27.8109, 43.438 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn6"]
+texture = ExtResource( 3 )
+
+[node name="white_pawn7" type="Node2D" parent="."]
+position = Vector2( 45.5569, 43.438 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn7"]
+texture = ExtResource( 3 )
+
+[node name="white_pawn8" type="Node2D" parent="."]
+position = Vector2( 62.7732, 43.438 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_pawn8"]
+texture = ExtResource( 3 )
+
+[node name="black_pawn1" type="Node2D" parent="."]
+position = Vector2( -62.7732, -46.6164 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn1"]
+texture = ExtResource( 2 )
+
+[node name="black_pawn2" type="Node2D" parent="."]
+position = Vector2( -45.0272, -46.6164 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn2"]
+texture = ExtResource( 2 )
+
+[node name="black_pawn3" type="Node2D" parent="."]
+position = Vector2( -26.7514, -45.5569 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn3"]
+texture = ExtResource( 2 )
+
+[node name="black_pawn4" type="Node2D" parent="."]
+position = Vector2( -8.74056, -46.6164 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn4"]
+texture = ExtResource( 2 )
+
+[node name="black_pawn5" type="Node2D" parent="."]
+position = Vector2( 9.2703, -45.8218 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn5"]
+texture = ExtResource( 2 )
+
+[node name="black_pawn6" type="Node2D" parent="."]
+position = Vector2( 27.0163, -46.8812 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn6"]
+texture = ExtResource( 2 )
+
+[node name="black_pawn7" type="Node2D" parent="."]
+position = Vector2( 45.292, -46.0866 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn7"]
+texture = ExtResource( 2 )
+
+[node name="black_pawn8" type="Node2D" parent="."]
+position = Vector2( 63.303, -46.0866 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_pawn8"]
+texture = ExtResource( 2 )
+
+[node name="white_king" type="Node2D" parent="."]
+position = Vector2( 9.00541, 62.2435 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="white_king"]
+texture = ExtResource( 5 )
+
+[node name="black_king" type="Node2D" parent="."]
+position = Vector2( -9.00543, -63.8326 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="black_king"]
+texture = ExtResource( 4 )
