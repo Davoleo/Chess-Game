@@ -5,28 +5,18 @@
 [ext_resource path="res://art/pedone_bianco.png" type="Texture" id=3]
 [ext_resource path="res://art/re_nero.png" type="Texture" id=4]
 [ext_resource path="res://art/re_bianco.png" type="Texture" id=5]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	getnode(\"Camera2D\").addchild(map)
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
+[ext_resource path="res://script/map_script.gd" type="Script" id=6]
 
 [node name="Map" type="Node2D"]
-script = SubResource( 1 )
+position = Vector2( 349.958, 242.952 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.167786, -1.41899 )
+position = Vector2( 0.426818, -0.229781 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -114,7 +104,7 @@ __meta__ = {
 texture = ExtResource( 2 )
 
 [node name="black_pawn2" type="Node2D" parent="."]
-position = Vector2( -45.0272, -46.6164 )
+position = Vector2( -45.3245, -46.6164 )
 __meta__ = {
 "_edit_group_": true
 }
