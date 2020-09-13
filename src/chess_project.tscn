@@ -1,185 +1,614 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://art/chessboard.png" type="Texture" id=1]
-[ext_resource path="res://art/pedone_nero.png" type="Texture" id=2]
-[ext_resource path="res://art/pedone_bianco.png" type="Texture" id=3]
-[ext_resource path="res://art/re_nero.png" type="Texture" id=4]
-[ext_resource path="res://art/re_bianco.png" type="Texture" id=5]
-[ext_resource path="res://script/map_script.gd" type="Script" id=6]
+[ext_resource path="res://art/assets/chessboard.png" type="Texture" id=1]
+[ext_resource path="res://art/assets/pawn_black.png" type="Texture" id=2]
+[ext_resource path="res://art/assets/pawn_white.png" type="Texture" id=3]
+[ext_resource path="res://art/assets/king_black.png" type="Texture" id=4]
+[ext_resource path="res://art/assets/king_white.png" type="Texture" id=5]
+[ext_resource path="res://art/assets/bishop_white.png" type="Texture" id=6]
+[ext_resource path="res://art/assets/rook_black.png" type="Texture" id=7]
+[ext_resource path="res://art/assets/queen_black.png" type="Texture" id=8]
+[ext_resource path="res://art/assets/bishop_black.png" type="Texture" id=9]
+[ext_resource path="res://art/assets/knight_white.png" type="Texture" id=10]
+[ext_resource path="res://art/assets/rook_white.png" type="Texture" id=11]
+[ext_resource path="res://art/assets/knight_black.png" type="Texture" id=12]
+[ext_resource path="res://art/assets/queen_white.png" type="Texture" id=13]
 
-[node name="Map" type="Node2D"]
-position = Vector2( 349.958, 242.952 )
-scale = Vector2( 2, 2 )
-script = ExtResource( 6 )
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 9.13423, 9.32673 )
+
+[node name="Map" type="KinematicBody2D"]
+position = Vector2( -1.25, 0.5 )
+
+[node name="MapCollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.426818, -0.229781 )
+[node name="MapSprite" type="Sprite" parent="."]
+position = Vector2( 0.520275, -0.445953 )
 texture = ExtResource( 1 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="white_pawn1" type="Node2D" parent="."]
-position = Vector2( -63.0381, 43.7029 )
+[node name="pawn_white1" type="KinematicBody2D" parent="."]
+position = Vector2( -66.1603, 46.7885 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn1"]
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white1"]
 texture = ExtResource( 3 )
-
-[node name="white_pawn2" type="Node2D" parent="."]
-position = Vector2( -45.292, 43.1731 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn2"]
+[node name="pawn_white2" type="KinematicBody2D" parent="."]
+position = Vector2( -46.9465, 47.4184 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white2"]
 texture = ExtResource( 3 )
-
-[node name="white_pawn3" type="Node2D" parent="."]
-position = Vector2( -25.692, 43.438 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn3"]
+[node name="pawn_white3" type="KinematicBody2D" parent="."]
+position = Vector2( -28.0477, 47.1409 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white3"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white3"]
 texture = ExtResource( 3 )
-
-[node name="white_pawn4" type="Node2D" parent="."]
-position = Vector2( -8.47571, 43.7029 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn4"]
+[node name="pawn_white4" type="KinematicBody2D" parent="."]
+position = Vector2( -8.83386, 47.1035 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white4"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white4"]
 texture = ExtResource( 3 )
-
-[node name="white_pawn5" type="Node2D" parent="."]
-position = Vector2( 8.47571, 43.7029 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn5"]
+[node name="pawn_white5" type="KinematicBody2D" parent="."]
+position = Vector2( 10.0649, 47.1035 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white5"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white5"]
 texture = ExtResource( 3 )
-
-[node name="white_pawn6" type="Node2D" parent="."]
-position = Vector2( 27.8109, 43.438 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn6"]
+[node name="pawn_white6" type="KinematicBody2D" parent="."]
+position = Vector2( 28.6488, 47.1034 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white6"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white6"]
 texture = ExtResource( 3 )
-
-[node name="white_pawn7" type="Node2D" parent="."]
-position = Vector2( 45.5569, 43.438 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn7"]
+[node name="pawn_white7" type="KinematicBody2D" parent="."]
+position = Vector2( 48.4925, 47.1035 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white7"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white7"]
 texture = ExtResource( 3 )
-
-[node name="white_pawn8" type="Node2D" parent="."]
-position = Vector2( 62.7732, 43.438 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_pawn8"]
+[node name="pawn_white8" type="KinematicBody2D" parent="."]
+position = Vector2( 67.3914, 46.7885 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white8"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_white8"]
 texture = ExtResource( 3 )
-
-[node name="black_pawn1" type="Node2D" parent="."]
-position = Vector2( -62.7732, -46.6164 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn1"]
+[node name="pawn_black1" type="KinematicBody2D" parent="."]
+position = Vector2( -65.8453, -48.0206 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black1"]
 texture = ExtResource( 2 )
-
-[node name="black_pawn2" type="Node2D" parent="."]
-position = Vector2( -45.3245, -46.6164 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn2"]
+[node name="pawn_black2" type="KinematicBody2D" parent="."]
+position = Vector2( -47.2615, -47.7056 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black2"]
 texture = ExtResource( 2 )
-
-[node name="black_pawn3" type="Node2D" parent="."]
-position = Vector2( -26.7514, -45.5569 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn3"]
+[node name="pawn_black3" type="KinematicBody2D" parent="."]
+position = Vector2( -27.7327, -48.0206 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black3"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black3"]
 texture = ExtResource( 2 )
-
-[node name="black_pawn4" type="Node2D" parent="."]
-position = Vector2( -8.74056, -46.6164 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn4"]
+[node name="pawn_black4" type="KinematicBody2D" parent="."]
+position = Vector2( -9.14888, -48.3356 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black4"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black4"]
 texture = ExtResource( 2 )
-
-[node name="black_pawn5" type="Node2D" parent="."]
-position = Vector2( 9.2703, -45.8218 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn5"]
+[node name="pawn_black5" type="KinematicBody2D" parent="."]
+position = Vector2( 9.43495, -48.0206 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black5"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black5"]
 texture = ExtResource( 2 )
-
-[node name="black_pawn6" type="Node2D" parent="."]
-position = Vector2( 27.0163, -46.8812 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn6"]
+[node name="pawn_black6" type="KinematicBody2D" parent="."]
+position = Vector2( 29.2787, -48.0206 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black6"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black6"]
 texture = ExtResource( 2 )
-
-[node name="black_pawn7" type="Node2D" parent="."]
-position = Vector2( 45.292, -46.0866 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn7"]
+[node name="pawn_black7" type="KinematicBody2D" parent="."]
+position = Vector2( 48.4925, -48.0206 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black7"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black7"]
 texture = ExtResource( 2 )
-
-[node name="black_pawn8" type="Node2D" parent="."]
-position = Vector2( 63.303, -46.0866 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_pawn8"]
+[node name="pawn_black8" type="KinematicBody2D" parent="."]
+position = Vector2( 67.0764, -48.0206 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_black8"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="pawn_black8"]
 texture = ExtResource( 2 )
-
-[node name="white_king" type="Node2D" parent="."]
-position = Vector2( 9.00541, 62.2435 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="white_king"]
+[node name="rook_white1" type="KinematicBody2D" parent="."]
+position = Vector2( -66.1603, 65.6873 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="rook_white1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="rook_white1"]
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="rook_white2" type="KinematicBody2D" parent="."]
+position = Vector2( 67.0764, 66.3172 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="rook_white2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="rook_white2"]
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="rook_black1" type="KinematicBody2D" parent="."]
+position = Vector2( -65.5303, -66.9194 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="rook_black1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="rook_black1"]
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="rook_black2" type="KinematicBody2D" parent="."]
+position = Vector2( 68.0213, -67.8643 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="rook_black2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="rook_black2"]
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="bishop_white1" type="KinematicBody2D" parent="."]
+position = Vector2( -28.0477, 66.3173 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="bishop_white1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="bishop_white1"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="bishop_white2" type="KinematicBody2D" parent="."]
+position = Vector2( 29.5937, 66.3173 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="bishop_white2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="bishop_white2"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="bishop_black1" type="KinematicBody2D" parent="."]
+position = Vector2( -28.3814, -67.1667 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="bishop_black1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="bishop_black1"]
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="bishop_black2" type="KinematicBody2D" parent="."]
+position = Vector2( 28.683, -67.1667 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="bishop_black2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="bishop_black2"]
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="knight_white1" type="KinematicBody2D" parent="."]
+position = Vector2( -46.7355, 65.9836 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="knight_white1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="knight_white1"]
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="knight_white2" type="KinematicBody2D" parent="."]
+position = Vector2( 48.0382, 66.3173 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="knight_white2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="knight_white2"]
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="knight_black1" type="KinematicBody2D" parent="."]
+position = Vector2( -47.0692, -67.1667 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="knight_black1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="knight_black1"]
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="knight_black2" type="KinematicBody2D" parent="."]
+position = Vector2( 47.7045, -67.1667 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="knight_black2"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="knight_black2"]
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="queen_white1" type="KinematicBody2D" parent="."]
+position = Vector2( -9.35992, 65.9836 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="queen_white1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="queen_white1"]
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="queen_black1" type="KinematicBody2D" parent="."]
+position = Vector2( 9.99527, -66.833 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="queen_black1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="queen_black1"]
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="king_white1" type="KinematicBody2D" parent="."]
+position = Vector2( 10.329, 65.9836 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="king_white1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="king_white1"]
 texture = ExtResource( 5 )
-
-[node name="black_king" type="Node2D" parent="."]
-position = Vector2( -9.00543, -63.8326 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="black_king"]
+[node name="king_black1" type="KinematicBody2D" parent="."]
+position = Vector2( -9.35992, -67.5004 )
+
+[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="king_black1"]
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WhitePawnSprite" type="Sprite" parent="king_black1"]
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
