@@ -9,8 +9,9 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 9.13423, 9.32673 )
 
-[node name="Map" type="KinematicBody2D"]
-position = Vector2( 352, 226 )
+[node name="Map" type="StaticBody2D"]
+position = Vector2( 227.274, 229.564 )
+scale = Vector2( 3, 3 )
 
 [node name="MapCollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

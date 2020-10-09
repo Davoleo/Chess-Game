@@ -17,12 +17,13 @@ _global_script_class_icons={
 
 config/name="Chess game"
 run/main_scene="res://chess_project.tscn"
-config/icon="res://icon.png"
+config/icon="res://art/assets/chessboard.png"
 
 [display]
 
-window/size/width=720
-window/size/height=480
+window/size/width=456
+window/size/height=456
+window/size/resizable=false
 
 [rendering]
 
