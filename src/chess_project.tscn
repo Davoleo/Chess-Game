@@ -6,19 +6,15 @@
 [ext_resource path="res://script/map_script.gd" type="Script" id=4]
 [ext_resource path="res://piece_shape.tres" type="Shape2D" id=5]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="TileSet" id=1]
 
-[node name="Map" type="Area2D"]
+[node name="Map" type="TileMap"]
 position = Vector2( 227.274, 229.564 )
 scale = Vector2( 3, 3 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 19, 19 )
+format = 1
 script = ExtResource( 4 )
-
-[node name="MapCollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="MapSprite" type="Sprite" parent="."]
 position = Vector2( 0.520275, -0.445953 )

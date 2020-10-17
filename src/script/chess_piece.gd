@@ -1,15 +1,11 @@
 extends KinematicBody2D
 
-class_name ChessPiece
+class_name Pawn
 
 var virtual_position = position / (19 * 3)
 var target = Vector2()
+
+var selected = false
  
 func _ready():
-	pass
-
-func _on_KinematicBody2D_input_event(_viewport, event, _shapeId):
-	if event.is_action_pressed('click'):
-		target = get_global_mouse_position()
-		self.position = target
-		print("Called")
+	self.connect("input_event", get_parent(), "_on_chess_piece_selected")

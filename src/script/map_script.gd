@@ -1,4 +1,4 @@
-extends Area2D
+extends TileMap
 
 enum EnumPieces {
 	PAWN,
@@ -11,7 +11,7 @@ enum EnumPieces {
 
 var map_size
 # scale * actual cell size in pixels
-const cell_size = 3 * 19
+const unit = 3 * 19
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,3 +21,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
+func _on_chess_piece_selected(_viewport, event, _shapeId):
+	if event.is_action_pressed('click'):
+		print("Selected")
