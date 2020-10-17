@@ -1,17 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://art/assets/chessboard.png" type="Texture" id=1]
+[ext_resource path="res://script/chess_piece.gd" type="Script" id=2]
 [ext_resource path="res://art/assets/pawn_white.png" type="Texture" id=3]
-[ext_resource path="res://script/drag_and_drop.gd" type="Script" id=14]
+[ext_resource path="res://script/map_script.gd" type="Script" id=4]
+[ext_resource path="res://piece_shape.tres" type="Shape2D" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9.13423, 9.32673 )
-
-[node name="Map" type="StaticBody2D"]
+[node name="Map" type="Area2D"]
 position = Vector2( 227.274, 229.564 )
 scale = Vector2( 3, 3 )
+script = ExtResource( 4 )
 
 [node name="MapCollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -29,12 +29,12 @@ __meta__ = {
 }
 
 [node name="pawn_white1" type="KinematicBody2D" parent="."]
-position = Vector2( -66.1603, 46.7885 )
+position = Vector2( -65.9619, 47.0317 )
 input_pickable = true
-script = ExtResource( 14 )
+script = ExtResource( 2 )
 
 [node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white1"]
-shape = SubResource( 2 )
+shape = ExtResource( 5 )
 one_way_collision_margin = 0.0
 __meta__ = {
 "_edit_group_": true,
@@ -47,4 +47,3 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
-[connection signal="input_event" from="pawn_white1" to="pawn_white1" method="_on_KinematicBody2D_input_event"]
