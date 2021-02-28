@@ -12,13 +12,9 @@ func _process(delta):
 	if clicked:
 		var mousepos = get_viewport().get_mouse_position()
 		self.position = Vector2(mousepos.x-352, mousepos.y-226)
-		
-
-		
 
 func _set_drag():
 	clicked=!clicked
-
 
 func _on_KinematicBody2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:

@@ -1,15 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://art/assets/chessboard.png" type="Texture" id=1]
 [ext_resource path="res://script/chess_piece.gd" type="Script" id=2]
 [ext_resource path="res://art/assets/pawn_white.png" type="Texture" id=3]
 [ext_resource path="res://script/map_script.gd" type="Script" id=4]
-[ext_resource path="res://piece_shape.tres" type="Shape2D" id=5]
 
 [sub_resource type="TileSet" id=1]
 
 [node name="Map" type="TileMap"]
-position = Vector2( 227.274, 229.564 )
+position = Vector2( 230, 229.5 )
 scale = Vector2( 3, 3 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 19, 19 )
@@ -17,25 +16,15 @@ format = 1
 script = ExtResource( 4 )
 
 [node name="MapSprite" type="Sprite" parent="."]
-position = Vector2( 0.520275, -0.445953 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="pawn_white1" type="KinematicBody2D" parent="."]
-position = Vector2( -65.9619, 47.0317 )
-input_pickable = true
+[node name="pawn_white1" type="Node2D" parent="."]
+position = Vector2( -65.967, 47.032 )
 script = ExtResource( 2 )
-
-[node name="WhitePawnCollisionShape2D" type="CollisionShape2D" parent="pawn_white1"]
-shape = ExtResource( 5 )
-one_way_collision_margin = 0.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="WhitePawnSprite" type="Sprite" parent="pawn_white1"]
 texture = ExtResource( 3 )

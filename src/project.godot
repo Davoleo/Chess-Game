@@ -9,13 +9,13 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "ChessPiece",
+"base": "Node2D",
+"class": "Pawn",
 "language": "GDScript",
 "path": "res://script/chess_piece.gd"
 } ]
 _global_script_class_icons={
-"ChessPiece": ""
+"Pawn": ""
 }
 
 [application]
