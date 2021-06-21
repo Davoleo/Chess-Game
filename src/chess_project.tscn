@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://art/assets/chessboard.png" type="Texture" id=1]
-[ext_resource path="res://script/chess_piece.gd" type="Script" id=2]
+[ext_resource path="res://script/chess_piece.cs" type="Script" id=2]
 [ext_resource path="res://art/assets/pawn_white.png" type="Texture" id=3]
 [ext_resource path="res://script/map_script.gd" type="Script" id=4]
 
