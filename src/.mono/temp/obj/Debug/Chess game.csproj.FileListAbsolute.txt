@@ -1,0 +1,2 @@
+D:\Everything\Coding\games\Chess-Game\src\.mono\temp\obj\Debug\Chess game.csproj.AssemblyReference.cache
+D:\Everything\Coding\games\Chess-Game\src\.mono\temp\obj\Debug\Chess game.csproj.CoreCompileInputs.cache
