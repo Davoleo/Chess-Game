@@ -19,7 +19,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="script\Chessboard.cs" />
-    <Compile Include="script\ChessPiece.cs" />
+    <Compile Include="script\Pieces\ChessPiece.cs" />
+    <Compile Include="script\Utils\EnumMovementResult.cs" />
     <Compile Include="script\Utils\EnumTeam.cs" />
     <Compile Include="script\Utils\PieceTypes.cs" />
   </ItemGroup>

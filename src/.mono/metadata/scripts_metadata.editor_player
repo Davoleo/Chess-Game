@@ -1,1 +1,1 @@
-{"res://script/ChessPiece.cs":{"modified_time":"1614528827","class":{"namespace":"","class_name":"ChessPiece","nested":false}}}
+{"res://script/Chessboard.cs":{"modified_time":"1624461184","class":{"namespace":"ChessGame.script","class_name":"Chessboard","nested":false}},"res://script/Pieces/ChessPiece.cs":{"modified_time":"1624463310","class":{"namespace":"ChessGame.script.Pieces","class_name":"ChessPiece","nested":false}}}

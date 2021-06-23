@@ -1,2 +1,6 @@
 D:\Everything\Coding\games\Chess-Game\src\.mono\temp\obj\Debug\Chess game.csproj.AssemblyReference.cache
 D:\Everything\Coding\games\Chess-Game\src\.mono\temp\obj\Debug\Chess game.csproj.CoreCompileInputs.cache
+D:\Everything\Coding\games\Chess-Game\src\.mono\temp\bin\Debug\Chess game.dll
+D:\Everything\Coding\games\Chess-Game\src\.mono\temp\bin\Debug\Chess game.pdb
+D:\Everything\Coding\games\Chess-Game\src\.mono\temp\obj\Debug\Chess game.dll
+D:\Everything\Coding\games\Chess-Game\src\.mono\temp\obj\Debug\Chess game.pdb

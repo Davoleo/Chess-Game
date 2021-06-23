@@ -1,4 +1,4 @@
-﻿namespace Chessgame.script.Utils
+﻿namespace ChessGame.script.Utils
 {
     public enum EnumTeam
     {
