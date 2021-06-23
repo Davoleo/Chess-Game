@@ -1,19 +1,27 @@
+﻿using Godot;
+
+namespace Chessgame.script
+{
+    public class Chessboard : TileMap
+    {
+	    public const int UNIT = 3 * 19;
+	    private Vector2 mapSize;
+
+	    public override void _Ready()
+	    {
+		    mapSize = GetViewport().Size;
+	    }
+
+	    public void On_ChessPiece_Selected()
+	    {
+
+	    }
+    }
+}
+
+
+/*
 extends TileMap
-
-# TODO : Move These to a more appropriate place
-enum EnumPieces {
-	PAWN,
-	ROOK,
-	KNIGHT,
-	BISHOP,
-	QUEEN,
-	KING
-}
-
-enum EnumTeam {
-	BLACK,
-	WHITE
-}
 
 var map_size
 # scale * actual cell size in pixels
@@ -34,3 +42,4 @@ func _on_chess_piece_selected(_viewport, event, _shapeId):
 
 func convert_to_cell_position(position):
 	return position / (19 * 3);
+	*/

@@ -1,0 +1,5 @@
+﻿# IDE Project dir
+.idea
+
+# Builds
+.mono

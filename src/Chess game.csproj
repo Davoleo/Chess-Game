@@ -18,7 +18,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="script\chess_piece.cs" />
-    <Compile Include="script\chess_piece.cs" />
+    <Compile Include="script\Chessboard.cs" />
+    <Compile Include="script\ChessPiece.cs" />
+    <Compile Include="script\Utils\EnumTeam.cs" />
+    <Compile Include="script\Utils\PieceTypes.cs" />
   </ItemGroup>
 </Project>
