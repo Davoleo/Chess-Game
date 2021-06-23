@@ -9,13 +9,19 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "Enums",
+"language": "GDScript",
+"path": "res://script/utils/misc_enums.gd"
+}, {
 "base": "Node2D",
 "class": "Pawn",
 "language": "GDScript",
-"path": "res://script/chess_piece.gd"
+"path": "res://script/pawn.gd"
 } ]
 _global_script_class_icons={
-"Pawn": ""
+"Enums": "",
+"Pawn": "res://art/assets/pawn_white.png"
 }
 
 [application]

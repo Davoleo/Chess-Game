@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://art/assets/chessboard.png" type="Texture" id=1]
-[ext_resource path="res://script/chess_piece.gd" type="Script" id=2]
-[ext_resource path="res://art/assets/pawn_white.png" type="Texture" id=3]
+[ext_resource path="res://pawn.tscn" type="PackedScene" id=2]
 [ext_resource path="res://script/map_script.gd" type="Script" id=4]
 
 [sub_resource type="TileSet" id=1]
@@ -22,13 +21,25 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="pawn_white1" type="Node2D" parent="."]
-position = Vector2( -65.967, 47.032 )
-script = ExtResource( 2 )
+[node name="pawn_white1" parent="." instance=ExtResource( 2 )]
 
-[node name="WhitePawnSprite" type="Sprite" parent="pawn_white1"]
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+[node name="pawn_white2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -47.5017, 47.032 )
+
+[node name="pawn_white3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -28.5915, 47.032 )
+
+[node name="pawn_white4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -9.23631, 47.032 )
+
+[node name="pawn_white5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9.45146, 47.032 )
+
+[node name="pawn_white6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 28.5842, 47.032 )
+
+[node name="pawn_white7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 47.7169, 47.032 )
+
+[node name="pawn_white8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 66.6271, 47.032 )

@@ -1,19 +1,11 @@
 extends TileMap
 
 # TODO : Move These to a more appropriate place
-enum EnumPieces {
-	PAWN,
-	ROOK,
-	KNIGHT,
-	BISHOP,
-	QUEEN,
-	KING
-}
+const white_pawns = [
+	
+]
 
-enum EnumTeam {
-	BLACK,
-	WHITE
-}
+const black_pawns = []
 
 var map_size
 # scale * actual cell size in pixels
@@ -32,5 +24,5 @@ func _on_chess_piece_selected(_viewport, event, _shapeId):
 	if event.is_action_pressed('click'):
 		print("Selected")
 
-func convert_to_cell_position(position):
-	return position / (19 * 3);
+func setup_chessboard():
+	pass
