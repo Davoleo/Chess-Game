@@ -33,11 +33,9 @@ namespace ChessGame.script
 			    _pieces[pos] = piece;
 			    return oldPiece;
 		    }
-		    else
-		    {
-			    _pieces.Add(pos, piece);
-			    return null;
-		    }
+
+		    _pieces.Add(pos, piece);
+		    return null;
 	    }
 
 	    /// <summary>
@@ -68,7 +66,7 @@ namespace ChessGame.script
 					    Console.WriteLine("PAWN, SALMON CORAL");
 				    }
 
-				    Console.WriteLine("Selected");
+				    Console.WriteLine($"Selected: ${eventCellPos.ToString()}");
 			    }
 		    }
 	    }

@@ -1,34 +1,30 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://art/assets/chessboard.png" type="Texture" id=1]
 [ext_resource path="res://script/Chessboard.cs" type="Script" id=2]
 [ext_resource path="res://art/assets/pawn_white.png" type="Texture" id=3]
 [ext_resource path="res://script/Pieces/ChessPiece.cs" type="Script" id=4]
 
-[sub_resource type="TileSet" id=1]
-
 [node name="Map" type="TileMap"]
-position = Vector2( 230, 229.5 )
 scale = Vector2( 3, 3 )
-tile_set = SubResource( 1 )
 cell_size = Vector2( 19, 19 )
 format = 1
 script = ExtResource( 2 )
 
 [node name="MapSprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+centered = false
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="pawn_white1" type="Node2D" parent="."]
-position = Vector2( -65.967, 47.032 )
+position = Vector2( 9.20829, 122.207 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="WhitePawnSprite" type="Sprite" parent="pawn_white1"]
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
