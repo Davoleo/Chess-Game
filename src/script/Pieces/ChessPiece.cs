@@ -15,6 +15,11 @@ namespace ChessGame.script.Pieces
         private Vector2 targetPos;
         private bool selected;
 
+        protected ChessPiece()
+        {
+            team = EnumTeam.WHITE;
+        }
+
         protected ChessPiece(EnumTeam team)
         {
             this.team = team;
