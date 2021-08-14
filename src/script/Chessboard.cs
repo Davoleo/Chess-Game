@@ -59,14 +59,15 @@ namespace ChessGame.script
 			    if (mouseEvent.IsActionPressed("click"))
 			    {
 				    Vector2 eventCellPos = WorldToMap(mouseEvent.Position);
-				    //Console.WriteLine(eventCellPos.ToString());
+
 				    if (_pieces.ContainsKey(eventCellPos))
 				    {
-					    _pieces[eventCellPos].Modulate = Colors.Coral;
+					    ChessPiece piece = _pieces[eventCellPos];
+					    piece.Selected = !piece.Selected;
 					    Console.WriteLine("PAWN, SALMON CORAL");
 				    }
 
-				    Console.WriteLine($"Selected: ${eventCellPos.ToString()}");
+				    Console.WriteLine($"Selected: {eventCellPos.ToString()}");
 			    }
 		    }
 	    }

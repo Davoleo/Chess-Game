@@ -5,6 +5,9 @@ namespace ChessGame.script.Pieces
 {
     public abstract class ChessPiece : Node2D
     {
+        [Signal]
+        public delegate void OnSelectionChanged(bool newValue);
+
         private Vector2 virtualPosition;
         private readonly EnumTeam team;
 
@@ -12,9 +15,9 @@ namespace ChessGame.script.Pieces
         private Vector2 targetPos;
         private bool selected;
 
-        protected ChessPiece()
+        protected ChessPiece(EnumTeam team)
         {
-            this.team = EnumTeam.WHITE;
+            this.team = team;
         }
 
         public override void _Ready()
@@ -26,16 +29,19 @@ namespace ChessGame.script.Pieces
             //Connect("input_event", GetParent(), "On_ChessPiece_Selected");
         }
 
-        public abstract bool Move(Vector2 targetPos);
+        public abstract EnumMovementResult Move(Vector2 targetPos);
 
-        // ReSharper disable once ParameterHidesMember
-        public void SetSelected(bool selected)
+        public abstract PieceTypes GetPieceType();
+
+        public bool Selected
         {
-            if (this.selected == selected)
-                return;
-
-            this.selected = selected;
-            this.Modulate = selected ? Colors.Coral : Colors.White;
+            get => selected;
+            set
+            {
+                selected = value;
+                Modulate = selected ? Colors.Coral : Colors.White;
+                EmitSignal(nameof(OnSelectionChanged), value);
+            }
         }
     }
 }
